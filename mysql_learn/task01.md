@@ -5,11 +5,11 @@
 安装时问题：
 一年前已安装mysql，当时没有配置环境变量
 按照教程配置环境变量如下：
-''' export PATH=$PATH:/usr/local/mysql/bin '''
-''' source ~/.bash_profile '''
+> ''' export PATH=$PATH:/usr/local/mysql/bin '''
+> ''' source ~/.bash_profile '''
 
 配置环境变量后执行：
-''' mysql -u root -p '''
+> ''' mysql -u root -p '''
 
 执行后输入密码，提示报错，报错信息如下：
 > ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
@@ -27,6 +27,7 @@
 > ''' sudo /etc/init.d/mysqld start '''
 > 提示： sudo: /etc/init.d/mysqld: command not found
 4. 尝试另一种启动方式
+> '''  /usr/local/mysql '''
 > '''  sudo ./support-files/mysql.server start '''
 5. 启动成功：
 > Starting MySQL 
