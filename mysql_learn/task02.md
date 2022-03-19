@@ -15,9 +15,12 @@
 where regist_date > '2009-04-28';
 
 2.2
-1) 价格为空的行
-2) 价格非空的行
-3) 价格非空的行
+~~1) 价格为空的行 ~~
+结果为空
+~~2) 价格非空的行 ~~
+结果为空
+~~3) 价格非空的行 ~~
+执行报错，不用用大于号比较NULL
 
 2.3
 > SELECT product_name, sale_price, purchase_price
