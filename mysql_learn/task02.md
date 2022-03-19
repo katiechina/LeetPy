@@ -38,3 +38,19 @@ where regist_date > '2009-04-28';
 where profit >= 100 and (product_type= '办公用品' or product_type= '厨房用具' );
 
 
+2.5
+- where 子语句应该在group by 之前
+- sum 的列必须时数值列，不能时字符串列
+
+
+2.6
+> SELECT product_type, sum(sale_price) as 'sum', sum(purchase_price) as 'sum'
+FROM product
+group by product_type
+having sum(sale_price) > sum(purchase_price)*1.5;
+
+2.7
+- regist_dates 时间倒序排列，但是null在最前面
+> SELECT *
+FROM product
+order by - regist_date; 
